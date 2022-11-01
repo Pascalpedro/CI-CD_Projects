@@ -38,3 +38,11 @@ jobs:
       with:
         gradle-version: 6.5
         arguments: build
+        
+    - name: Build and Push Docker image
+      uses: mr-smithers-excellent/docker-build-push@v3
+      with:
+        image: pascalpedro/demorepo
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
