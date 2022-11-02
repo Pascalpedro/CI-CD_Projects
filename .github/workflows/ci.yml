@@ -40,8 +40,8 @@ jobs:
     - name: Build and Push Docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: pascalpedro/simplewhale:latest
-        repository_name: 'simplewhale:latest'
+        image: pascalpedro/lamp_stack_web-server:latest
+        repository_name: 'lamp_stack_web-server:latest'
         tags: v1, latest
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
